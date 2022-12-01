@@ -138,21 +138,33 @@
 // FLOAT
 // Numbers with a decimal
 
-$x = 13.068;
-echo PHP_FLOAT_MIN;
-echo PHP_FLOAT_MAX;
+// $x = 13.068;
+// echo PHP_FLOAT_MIN;
+// echo PHP_FLOAT_MAX;
 
-$x = floor((0.1 + 0.7) * 10); // round decimal down
-$x = ceil((0.1 + 0.7) * 10); // round decimal up
+// $x = floor((0.1 + 0.7) * 10); // round decimal down
+// $x = ceil((0.1 + 0.7) * 10); // round decimal up
 
-$x = PHP_FLOAT_MAX * 2;
+// $x = PHP_FLOAT_MAX * 2;
 
-var_dump(is_infinite($x)); // Checks if number is infinite (out of bounds of max float)
-var_dump(is_finite($x)); // Checks if a number is not infinite
-var_dump(is_nan($x)); // Checks if number is NaN (Not a Number)
+// var_dump(is_infinite($x)); // Checks if number is infinite (out of bounds of max float)
+// var_dump(is_finite($x)); // Checks if a number is not infinite
+// var_dump(is_nan($x)); // Checks if number is NaN (Not a Number)
 
-var_dump((float) $x); // ((float) $x) will convert the value of x into float
+// var_dump((float) $x); // ((float) $x) will convert the value of x into float
 
+// Strings
+// Series of characters
 
+$firstName = 'Jack'; // strings are set with single quotes or double quotes
+$lastName = 'Will'; 
+$fullName = "${firstName} ${lastName}"; // variables can be used in double quotes, not in single quotes (this will spit out Jack Will)
 
+// Accessing single characters in a string
+// Can use 0 based indexing to reference each character
 
+// echo $fullName[0]; // Will spit out the first letter of the string (J) (This works from left to right, using negative numbers will go from right to left)
+
+// You can individually modify each character too
+$fullName[1] = 'A';
+echo $fullName;
