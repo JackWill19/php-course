@@ -47,8 +47,43 @@
 
 //Variable variables
 
-$foo = 'bar';
-$$foo = 'baz'; // $$ will take the value of the first variable ($$foo will take $foo's value 'bar) and turn it into a variable $bar which baz will be set to
+// $foo = 'bar';
+// $$foo = 'baz'; // $$ will take the value of the first variable ($$foo will take $foo's value 'bar) and turn it into a variable $bar which baz will be set to
 
-echo $foo , $bar; // You can also reference $bar as ${$foo}
+// echo $foo , $bar; // You can also reference $bar as ${$foo}
+
+/* DATA TYPES AND TYPE CASTING */
+
+# 4 Scalar Types 
+    // # bool - True or False - True prints as 1 - False prints as a blank
+    // $completed = true;
+    // # int - Whole Numbers - 1, 2, 3, 4, 5
+    // $score = 19;
+    // # float - Numbers w/ decimal - 1.5, 2.25, 3.75
+    // $price = 0.99;
+    // # string - series of characters "Jack", 'Hello World'
+    // $greeting = 'Hello World';
+
+    // echo $completed . '<br />';
+    // echo $score . '<br />';
+    // echo $price . '<br />';
+    // echo $greeting . '<br />';
+
+    // echo gettype($completed); // gettype() will fetch the type of the variable you pass through it
+    // var_dump($score); // var_dump() will fetch all known information about the variable passed, eg $score will be int(19)
+
+
+# 4 Compound Types 
+    # array - List of items, can have mixed data typres
+    // $companies = ['Apple', 'Microsoft', 'Sony', 1, 2, 3, true, false]; // You can not print an array via echo $companies
+    // print_r($companies); // Print_r will print the array and the index of each value "Array ([0] => Apple, [1] => Microsoft)"
+    # object
+    # callable
+    # iterable
+
+# 2 Special Types 
+    # resource
+    # null - NO VALUE
+
+
 
