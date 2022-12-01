@@ -27,11 +27,28 @@
 
 //CONSTANTS
 
-$firstName = 'Jack';
-$firstName = 'Berwyn';
-echo $firstName; // Berwyn will be printed as the variable has been changed, like a let in JS
+// $firstName = 'Jack';
+// $firstName = 'Berwyn';
+// echo $firstName; // Berwyn will be printed as the variable has been changed, like a let in JS
 
-define('SATUS_PAID', 'paid'); // define is used to set a constant variable, it takes a name and a value, the name follows the same rules as variable names
-                              // As a best practice to show it is a constant, uppercase letters are typically used
+// define('STATUS_PAID', 'paid'); // define is used to set a constant variable, it takes a name and a value, the name follows the same rules as variable names
+//                               // As a best practice to show it is a constant, uppercase letters are typically used
+// echo STATUS_PAID; // YOU DO NOT NEED A DOLLAR SIGN TO CALL A CONSTANT
 
+// echo defined('STATUS_PAID'); // defined is used to see is a constant has been defined
+
+// const STATUS_PAID = 'paid'; //Also works the same as 'define'
+
+//There are lots of predefined constants most of which show when PHP_ is typed
+// echo PHP_VERSION;
+
+// There are also magic constants
+// echo __LINE__; //This will tell you what line this has been ran on
+
+//Variable variables
+
+$foo = 'bar';
+$$foo = 'baz'; // $$ will take the value of the first variable ($$foo will take $foo's value 'bar) and turn it into a variable $bar which baz will be set to
+
+echo $foo , $bar; // You can also reference $bar as ${$foo}
 
