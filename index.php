@@ -108,16 +108,33 @@
 // Array - [] (empty array) = false
 // null = false
 
-//Pretty much everything else will be true
+// Pretty much everything else will be true
 
-$isComplete = true;
-$isComplete = 'false'; // 'false' is not an empty string so it will = true...
+// $isComplete = true;
+// $isComplete = 'false'; // 'false' is not an empty string so it will = true...
 
-if($isComplete) { // If isComplete = true
-    // Do something
-    echo 'Success';
-} else { // Else, if false
-    // Do something else
-    echo 'Fail';
-}
+// if($isComplete) { // If isComplete = true
+//     // Do something
+//     echo 'Success';
+// } else { // Else, if false
+//     // Do something else
+//     echo 'Fail';
+// }
+
+// INTERGERS
+// Whole Numbers, 1, 2, 3, 19, 200, -33, -21
+
+// is_int() checks is a value is an interger
+
+// $x = (int)5.98; // Will return as 5
+// $x = (int)true; // Will return as 1
+// $x = (int)'87kjfdshs'; // Will return as 87
+
+
+
+$x = PHP_INT_MAX; // The largest interger supported in PHP
+$x = PHP_INT_MAX + 1; // If this interger goes over the max it changes to a float
+
+
+
 
