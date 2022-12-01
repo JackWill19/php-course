@@ -132,8 +132,26 @@
 
 
 
-$x = PHP_INT_MAX; // The largest interger supported in PHP
-$x = PHP_INT_MAX + 1; // If this interger goes over the max it changes to a float
+// $x = PHP_INT_MAX; // The largest interger supported in PHP
+// $x = PHP_INT_MAX + 1; // If this interger goes over the max it changes to a float
+
+// FLOAT
+// Numbers with a decimal
+
+$x = 13.068;
+echo PHP_FLOAT_MIN;
+echo PHP_FLOAT_MAX;
+
+$x = floor((0.1 + 0.7) * 10); // round decimal down
+$x = ceil((0.1 + 0.7) * 10); // round decimal up
+
+$x = PHP_FLOAT_MAX * 2;
+
+var_dump(is_infinite($x)); // Checks if number is infinite (out of bounds of max float)
+var_dump(is_finite($x)); // Checks if a number is not infinite
+var_dump(is_nan($x)); // Checks if number is NaN (Not a Number)
+
+var_dump((float) $x); // ((float) $x) will convert the value of x into float
 
 
 
