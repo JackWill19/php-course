@@ -85,5 +85,18 @@
     # resource
     # null - NO VALUE
 
+// declare(strict_types=1); // Enabling strict mode so once a data type has been set to a variable, the type cannot be changed
+
+// function sum($x, $y){   //Creating a function that takes 2 arguments x and y
+//     return $x + $y;     // return the sum of x + y 
+// }                       // The type of the variable is determined by the context in which the variable is used
+
+// $sum = sum(2, '3');
+// echo sum(2, 3); //Calling the function and setting the x value to 2 and the y value to 3
+
+// $x = (int)'5'; // (int) forces the data being passed into being an interger, '5' is a string, but with (int)'5', it will be passed as 5.
+
+// var_dump($x);
+
 
 
