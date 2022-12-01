@@ -98,5 +98,26 @@
 
 // var_dump($x);
 
+// BOOLEANS
 
+// is_bool(); will check is a variable is true or false
+
+// Int - 0, -0 = false
+// Float - 0.0, -0.0 = false
+// Strings - '' (empty string), '0' = false
+// Array - [] (empty array) = false
+// null = false
+
+//Pretty much everything else will be true
+
+$isComplete = true;
+$isComplete = 'false'; // 'false' is not an empty string so it will = true...
+
+if($isComplete) { // If isComplete = true
+    // Do something
+    echo 'Success';
+} else { // Else, if false
+    // Do something else
+    echo 'Fail';
+}
 
