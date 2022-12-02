@@ -401,10 +401,17 @@
     // print_r($z);
 
 
-// Execution Operators (``)
+// OPERATOR PRESEDENCE AND ASSOCIATIVITY
+    // $x = 5 + 3 * 5; // 3 * 5 runs first and + adds 5 = 20
+
+    // //Can force presedence with()
+    // $x = (5 + 3) * 5; // 5 + 3 gets calculated first then multiply by 5 = 40
+
+    // $x = 5;
+    // $y = 2;
+    // $z = 10;
+
+    // $result = $x / $y * $z;
 
 
 
-// Type Operators (instanceof)
-
-//Nullsafe Operatoe - PHP8 (?)
