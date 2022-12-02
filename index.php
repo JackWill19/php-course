@@ -387,14 +387,23 @@
 
 // Array Operators (+ == === <>)
 
-$x = ['a', 'b', 'c'];
-$y = ['d', 'e', 'f', 'g', 'h'];
+//  $x = ['a', 'b', 'c'];
+//  $y = ['d', 'e', 'f', 'g', 'h'];
 
-$z = $x + $y;
-print_r($z);
+//  $z = $x + $y; // Compining the two arrays, if the two index's are the same, the first one set will take precedence
+
+    // $x = ['a' => 1, 'b' => 2, 'c' => 3];
+    // $y = ['d' => 4, 'e' => 5, 'f' => 6];
+
+    // $z = $x + $y; // If you combine two associative arrays, as long as the keys dont match, the second array will be appended onto the end of the first, if the key matches the original takes precedence
+    // $z = $x == $y; // Will return true if both keys and values of array match
+    // $z = $x === $y; // Will return true if both keys, values and data types of array match
+    // print_r($z);
 
 
 // Execution Operators (``)
+
+
 
 // Type Operators (instanceof)
 
