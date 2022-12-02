@@ -362,14 +362,37 @@
     // var_dump($y);
 
 // Error Operators (@)
+    //Surpresses errors from expressions (Dont Really Use it)
+    // $x = file('test.txt'); //file('') reads the file passed, if it does not exist you are thrown an error
+    // $x = @file('test.txt'); // @infront of file('') ignores the error
 
 // Increment / Decrement Operators (++, --)
+    // $x = 5;
+    // // Post increment, returns value and then does the increment 
+    //     $x++; // = 5 and is incremented;
+    //     echo $x; // = 6
+    //     $x--; // Post decrement, so now it will return 6 and then decrement it
+    //     echo $x; // = 5
 
+    // // Pre increment, does the increment and then returns the value
+    //     ++$x; // Will = 6 right away
+    //     echo $x;
+    //     --$x; // Will = 5 right away
+    //     echo $x;
+        
 // Logical Operators (&& || ! and or xor)
-
-// Bitwise Operators (& | ^ ~ << >>)
+    // && (and) = True if both values evaluate to true
+    // || (or) = True if one of the values it true
+    // ! (not) = flips the value, $x = false then !$x = true
 
 // Array Operators (+ == === <>)
+
+$x = ['a', 'b', 'c'];
+$y = ['d', 'e', 'f', 'g', 'h'];
+
+$z = $x + $y;
+print_r($z);
+
 
 // Execution Operators (``)
 
