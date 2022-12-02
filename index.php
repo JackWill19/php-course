@@ -197,3 +197,100 @@
 
 // If you cast null to an array then it will return as an empty array
     // var_dump((array) $x); // array(0) {}
+
+// ARRAYS
+    // Listing variables like this is inefficient and leads to repititon of code so we use Arrays to tidy it up
+    // $programmingLanguage1 = 'PHP';
+    // $programmingLanguage2 = 'JavaScript';
+    // $programmingLanguage3 = 'Python';
+
+    // $programmingLanguages = ['PHP', 'JavaScript', 'Python'];
+    // echo $programmingLanguages[0]; // referencing the first entry of the array
+    // echo $programmingLanguages[-1]; // Cannot reference an entry with a negative number
+    // var_dump(isset($programmingLanguages[0])); // Checks to see if a variable has been set to the given index 0 = true, 5 = false
+
+    // //You can change the value of an index like this
+    // $programmingLanguages[2] = 'CSS';
+    // echo $programmingLanguages[2];
+
+    // // Use print_r to echo the contents of the array
+    // echo '<pre>'; // Wrapping the array in a html 'pre' tag will tidy up the array making it easier to view
+    // print_r($programmingLanguages);
+    // echo '</pre>';
+
+    // // You can count all entries in an array
+    // echo count($programmingLanguages);
+
+    // // You can push a new entry to the end of the array
+    //     // $programmingLanguages[] = 'Python';
+    // // OR
+    //     array_push($programmingLanguages, 'Python', 'C++', 'C');
+
+    // echo '<pre>';
+    // print_r($programmingLanguages);
+    // echo '</pre>';
+    // echo count($programmingLanguages);
+
+// ASSOCIATIVE ARRAYS
+    // An array with named keys
+    // $programmingLanguages = ['PHP', 'JavaScript', 'Python'];
+
+    // //Setting keys to values in an associative array
+    // $programmingLanguages = [
+    //     'php' => '8.0',
+    //     'python' => '3.9',
+    // ];
+
+    // // $programmingLanguages['go'] = '1.15'; // Adding a new key and value to the associated array
+    // $newVariable = 'go';
+    // $programmingLanguages[$newVariable] = '1.15'; // You can set the value of the variable to be a key in the array 
+
+    // $programmingLanguages = [
+    //     'php' => [ // You can make multi layered arrays with loads of different data types
+    //         'creator' => 'Rasmus Lerdorf',
+    //         'extension' => '.php',
+    //         'website' => 'www.php.net',
+    //         'isOpenSource' => 'true',
+    //         'versions' => [
+    //             ['version' => 8, 'releaseDate' => 'Nov 26, 2020'],
+    //             ['version' => 7.4, 'releaseDate' => 'Nov 28, 2019'],
+    //         ],
+    //     ],
+    //     'python' => [
+    //         'creator' => 'Guido Van Rossum',
+    //         'extension' => '.py',
+    //         'website' => 'www.python.org',
+    //         'isOpenSource' => 'true',
+    //         'versions' => [
+    //             ['version' => 3.9, 'releaseDate' => 'Oct 5, 2020'],
+    //             ['version' => 3.8, 'releaseDate' => 'Oct 14, 2019'],
+    //         ],
+    //     ],
+    // ];
+
+    // echo '<pre>';
+    // print_r($programmingLanguages);
+    // echo '</pre>';
+
+    // // To access different layers of the array you do
+    //     echo $programmingLanguages['php']['versions'][0]['releaseDate']; //Echoing into the php array, into the versions layer, the 0 index of versions, then the release date of that version
+
+    // // If you have multiple keys that are the same, the last one will overwrite the other
+
+    // $array = ['a', 'b', 50 => 'c', 'd', 'e']; //the index of a and be would be 0, 1. Index of c, d and e would start at 50 onwards, so 50, 51, 52
+    
+    // // You can manipulate the array with these methods
+    //     echo array_pop($array); // In this case it would remove the last entry of the array
+    //     echo array_shift($array); // This will remove the first entry of the array (this also reindexes the array)
+    //     unset($array[50], $array[1]); // This will remove the entry with the index of 50
+
+// // MORE ARRAYS
+//     $x = 5;
+//     var_dump((array) $x); // This will add 5 to the first index of a new array, it will do the same with strings and booleans
+
+//     $y = null;
+//     var_dump((array) $y); // Trying to cast null into an array would give you an empty array
+
+//     $array = ['a' => 1, 'b' => null];
+//     var_dump(array_key_exists('a', $array)); // Checks if the KEY exists in the array, not checking the value
+//     var_dump(isset($array['a'])); // Checks if the KEY exists and if a VALUE has been assigned to the key
