@@ -156,15 +156,44 @@
 // Strings
 // Series of characters
 
-$firstName = 'Jack'; // strings are set with single quotes or double quotes
-$lastName = 'Will'; 
-$fullName = "${firstName} ${lastName}"; // variables can be used in double quotes, not in single quotes (this will spit out Jack Will)
+// $firstName = 'Jack'; // strings are set with single quotes or double quotes
+// $lastName = 'Will'; 
+// $fullName = "${firstName} ${lastName}"; // variables can be used in double quotes, not in single quotes (this will spit out Jack Will)
 
-// Accessing single characters in a string
-// Can use 0 based indexing to reference each character
+// // Accessing single characters in a string
+// // Can use 0 based indexing to reference each character
 
-// echo $fullName[0]; // Will spit out the first letter of the string (J) (This works from left to right, using negative numbers will go from right to left)
+// // echo $fullName[0]; // Will spit out the first letter of the string (J) (This works from left to right, using negative numbers will go from right to left)
 
-// You can individually modify each character too
-$fullName[1] = 'A';
-echo $fullName;
+// // You can individually modify each character too
+// $fullName[1] = 'A';
+// echo $fullName;
+
+//NULL
+// A Variable with no value
+// Variable can be null if it is assigned null
+    // $x = null; // Gets casted into a string which makes it an empty string so nothing displays
+    // var_dump(is_null($x)); // Quick test to see if the variable is actually null
+    // var_dump($x === null); // Another test to see if it is null by using the === comparison operator like in JS
+
+
+// Has not been defined yet
+    // var_dump($x); // Here we are calling a variable that hasn't been defined yet therefore it is undefined or null
+                     // If you call var_dump(is_null($x)) on an empty variable it will return true
+
+// It has been unset
+    // $x = 123;
+    // unset($x); //unset essentially destroys the variable making it null
+
+// If you cast null to a string then it becomes an empty string
+    // $x = null
+    // var_dump((string) $x); // = string(0)""
+
+// If you cast null to an interger then it will return as a 0
+    // var_dump((int) $x); // int(0)
+
+// If you cast null to a boolean then it will return as a false
+    // var_dump((bool) $x); // false
+
+// If you cast null to an array then it will return as an empty array
+    // var_dump((array) $x); // array(0) {}
