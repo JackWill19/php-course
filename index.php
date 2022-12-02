@@ -311,18 +311,55 @@
 // Something that takes one or more expressions and returns a value
 
 // Arithmatic Operators (+ - / * % **)
-$x = 10;
-$y = 2;
+    // $x = 10;
+    // $y = 2;
 
-var_dump($x + $y);
-var_dump($x - $y);
-var_dump($x / $y);
-var_dump($x * $y);
+    // var_dump($x + $y);
+    // var_dump($x - $y);
+    // var_dump($x / $y);
+    // var_dump($x * $y);
+    // var_dump($x ** $y);
+
 // Assignment Operators ( = += -= *= /= %= **=)
+    // $x = 10 // assign 10 to x
+    // $x = $y = 10; // will assign 10 to y which is also assigned to x
+    // $x = ($y = 10) + 5; // will assign 10 to y and then add 5 to assign 15 to x
+
+    //$x += 3 // Will take the original value of x and add 3
+    //$x -= 3 // Will take the original value of x and subtract 3
+    //$x *= 3
+    //$x /= 3
+    //$x %= 3
+    //$x **= 3
+    
 
 // String Operators (. *=)
+    // $x = 'Hello'; // Assigns hello to x
+    // $x = $x . 'World'; // concatenates the value of x with a string = Hello World
+
 
 // Comparison Operators (== === < > ?? ?:)
+    // $x = 10;
+    // $y = 2;
+
+    // var_dump($x == $y); // Loose Comparison
+    // var_dump($x === $y); // Strict comparison
+    // var_dump($x < $y); // Greater than
+    // var_dump($x > $y); // Less than
+    // var_dump($x <= $y); // Greater than or equal to
+    // var_dump($x >= $y); // Less than or equal to
+    // var_dump($x !== $y); // Does not equal
+    // var_dump($x !=== $y); // Does not equal
+
+    // $x = 'Hello World';
+    // $y = strpos($x, 'H'); // Finding the position of H in string $x
+    
+    // $result = $y == false ? 'H Not Found' : 'H Found at Index' . $y; // If there is no H in the string, echo 'H Not Found' or if true echo 'H was found at index {position}'
+    // echo $result;
+
+    // $x = null;
+    // $y = $x ?? 'hello';
+    // var_dump($y);
 
 // Error Operators (@)
 
