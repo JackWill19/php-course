@@ -306,4 +306,36 @@
 
 // if($x < 5) {
 //     echo 'Hello'; // Is an expression as it returns a boolean value
-// }
+
+// OPERATORS
+// Something that takes one or more expressions and returns a value
+
+// Arithmatic Operators (+ - / * % **)
+$x = 10;
+$y = 2;
+
+var_dump($x + $y);
+var_dump($x - $y);
+var_dump($x / $y);
+var_dump($x * $y);
+// Assignment Operators ( = += -= *= /= %= **=)
+
+// String Operators (. *=)
+
+// Comparison Operators (== === < > ?? ?:)
+
+// Error Operators (@)
+
+// Increment / Decrement Operators (++, --)
+
+// Logical Operators (&& || ! and or xor)
+
+// Bitwise Operators (& | ^ ~ << >>)
+
+// Array Operators (+ == === <>)
+
+// Execution Operators (``)
+
+// Type Operators (instanceof)
+
+//Nullsafe Operatoe - PHP8 (?)
