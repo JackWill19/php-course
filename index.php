@@ -413,5 +413,15 @@
 
     // $result = $x / $y * $z;
 
+// Control Structures (if / else / elseif / else if)
+
+// if($condition) { // If this condition is true
+    // Do something;
+// } elseif($nextCondition) { // Or check if this condition is true
+    // Do this instead
+//} else { // Or if it is false
+    // Do something else
+// }
+
 
 
