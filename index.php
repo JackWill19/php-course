@@ -294,3 +294,16 @@
 //     $array = ['a' => 1, 'b' => null];
 //     var_dump(array_key_exists('a', $array)); // Checks if the KEY exists in the array, not checking the value
 //     var_dump(isset($array['a'])); // Checks if the KEY exists and if a VALUE has been assigned to the key
+
+// EXPRESSIONS
+
+// // Anything that has a value or evaluates to a value (const, variables and values)
+// $x = 5; // Assigning a value
+// $y = $x; // x evaluates to 5 therefore assigning it to y is an expression
+
+// $z = $x === $y; // Evaluates to a boolean value
+// $z = sum($x, $y); // returns a value and assigns it to z so its an expression
+
+// if($x < 5) {
+//     echo 'Hello'; // Is an expression as it returns a boolean value
+// }
