@@ -599,7 +599,7 @@
     // Use require when the file is required by the application.
     // Use include when the file is not required and application should continue when file is not found.
         
-    include 'file.php'; // Include the code from file.php
+    // include 'file.php'; // Include the code from file.php
 
     // require
     // require_once
@@ -607,4 +607,43 @@
     // include_once
 
 
+// Functions
+// Has global scoping
 
+// you can call a function before its been created
+    // function example() { // name of function can either start with letters or underscore
+    //     return 'Hello World'; // you can return values
+    // }
+    
+    // $x = example();
+    // echo $x;
+
+// unless it is within a condition like an if statement 
+    // var_dump(foo()); //This will return an undefined error as the if statement needs run in order to create the function
+
+    // if(false){
+    //     function foo() {
+    //         return 'Hello World';
+    //     }
+    // }
+
+
+// foo() needs to be called before bar() can be called, if bar()
+        // function foo() {
+        //     echo 'Foo';
+        //     function bar() {
+        //         echo 'Bar';
+        //     }
+        // }
+
+// Return values from functions
+
+// function foo(): int { // foo(): int tells php that the expected value should be a number // If nothing is expected then you can use ': void' which will return null
+//     return '1'; // Because we arent using strict types, we can return a string and it can be converted into an interger
+// }
+
+// function bar(): int|float { // you can use | to add one or more expected data types, or use : mixed if you dont want to be specific
+//     return 1;
+// }
+
+// var_dump(foo());
