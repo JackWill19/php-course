@@ -537,13 +537,29 @@
 //         echo 4;
 // }
 
-// MATCH 
-$paymentStatus = 1;
+// MATCH
 
-$paymentStatusDisplay = match($paymentStatus) { // match does strict comparison
-    1 => print 'Paid',
-    2, 3 => print 'Payment Declined', // This case accepts both 2 or 3 as a correct value
-    0 => print 'Payment Pending',
-};
+// $paymentStatus = 1;
 
-echo $paymentStatusDisplay;
+// $paymentStatusDisplay = match($paymentStatus) { // match does strict comparison
+//     1 => print 'Paid',
+//     2, 3 => print 'Payment Declined', // This case accepts both 2 or 3 as a correct value
+//     0 => print 'Payment Pending',
+// };
+
+// echo $paymentStatusDisplay;
+
+// Return 
+
+// Returns the control of the program execution back to where it was called from
+// When used in a function it will stop the execution of that function and will return the given argument
+
+    // function sum(int $x, int $y) {
+    //     $z = $x + $y;
+    //     return $z;
+    // }
+
+    // $x = sum(5, 10);
+    // echo $x;
+    // echo '<br />';
+    // echo 'Hello World';
