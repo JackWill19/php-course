@@ -441,12 +441,46 @@ for($i = 0; $i < 15; $i++){ // i starts at 0, loop while i is less than 15, afte
     echo $i; // prints 1, 2, 3, 4... 14
 }
 
+
+// You can loop through strings (strlen)
 $text = 'Hello World';
 for($i = 0; $i < strlen($text); $i++){ // Loops through each character of $text string
     echo $text[$i] . '<br />'; // Echo each character of $text onto their own line
 }
 
+// You can also loop through arrays (count)
+$array = ['a', 'b', 'c', 'd'];
+$length = count($array); // setting a length variable for performance reasons
+
+for ($i = 0; $i < $length; $i++) { 
+    echo $array[$i] . '<br />';
+}
+
 // Foreach
+//  $programmingLanguages = ['php', ['java', 'c', 'c++', 'go', 'rust']];
 
+//  foreach($programmingLanguages as $language) { // foreach loops through each iteration of an array and assigns it to a variable
+//     echo $language . '<br />';
+//  }
 
+//  foreach($programmingLanguages as $key => $language) { // you can set a key to each iteration also
+//     echo $key . ':' . $language . '<br />';
+//  }
+ //QUICK NOTE - The variable doesnt get destroyed after the loop so typically you'd unset($language) after the loop to prevent problems
+
+ // Foreach over associatibe arrays
+
+ $user = [
+    'name' => 'Jack',
+    'email' => 'jack@email.com',
+    'skills' => ['html', 'css', 'javascript', 'php'],
+ ];
+
+//  foreach($user as $key => $value) {
+//     echo $key . ': ' . $value . '<br />'; // This will only print name and email, not the skills array
+//  }
+
+ foreach($user as $key => $value) {
+    echo $key . ': ' . json_encode($value) . '<br />'; // Using json.encode() converts the array so it can be printed
+ };
 
