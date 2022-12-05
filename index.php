@@ -536,3 +536,14 @@
 //     default:
 //         echo 4;
 // }
+
+// MATCH 
+$paymentStatus = 1;
+
+$paymentStatusDisplay = match($paymentStatus) { // match does strict comparison
+    1 => print 'Paid',
+    2, 3 => print 'Payment Declined', // This case accepts both 2 or 3 as a correct value
+    0 => print 'Payment Pending',
+};
+
+echo $paymentStatusDisplay;
