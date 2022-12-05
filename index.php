@@ -1,4 +1,4 @@
-<?php //If it is only a php document with no html or other languages, theres no need for a closing php tag --> -->
+<!-- <?php //If it is only a php document with no html or other languages, theres no need for a closing php tag 
 
 // echo 'Hello World'; // Echo prints to the page. // '' makes the content a string // Statement ends with a semi colon
 // print 'Hello World'; //Print is the same as echo but print has a return value of 1 (typically use echo)
@@ -426,61 +426,113 @@
 // LOOPS
 
 // While
-    $i = 0;
-    while($i <= 15){ //While i is less than or equal to 15
-        echo $i++; // print i and increment it by 1 = 1, 2, 3, 4... 15
-    }
+//     $i = 0;
+//     while($i <= 15){ //While i is less than or equal to 15
+//         echo $i++; // print i and increment it by 1 = 1, 2, 3, 4... 15
+//     }
 
-// Do-while
-do {
-    echo $i++; // prints 0, 1, 2, 3... 15
-} while ($i <= 15);
+// // Do-while
+// do {
+//     echo $i++; // prints 0, 1, 2, 3... 15
+// } while ($i <= 15);
 
-// For
-for($i = 0; $i < 15; $i++){ // i starts at 0, loop while i is less than 15, after every loop, add 1 to i
-    echo $i; // prints 1, 2, 3, 4... 14
-}
+// // For
+// for($i = 0; $i < 15; $i++){ // i starts at 0, loop while i is less than 15, after every loop, add 1 to i
+//     echo $i; // prints 1, 2, 3, 4... 14
+// }
 
 
-// You can loop through strings (strlen)
-$text = 'Hello World';
-for($i = 0; $i < strlen($text); $i++){ // Loops through each character of $text string
-    echo $text[$i] . '<br />'; // Echo each character of $text onto their own line
-}
+// // You can loop through strings (strlen)
+// $text = 'Hello World';
+// for($i = 0; $i < strlen($text); $i++){ // Loops through each character of $text string
+//     echo $text[$i] . '<br />'; // Echo each character of $text onto their own line
+// }
 
-// You can also loop through arrays (count)
-$array = ['a', 'b', 'c', 'd'];
-$length = count($array); // setting a length variable for performance reasons
+// // You can also loop through arrays (count)
+// $array = ['a', 'b', 'c', 'd'];
+// $length = count($array); // setting a length variable for performance reasons
 
-for ($i = 0; $i < $length; $i++) { 
-    echo $array[$i] . '<br />';
-}
+// for ($i = 0; $i < $length; $i++) { 
+//     echo $array[$i] . '<br />';
+// }
 
-// Foreach
-//  $programmingLanguages = ['php', ['java', 'c', 'c++', 'go', 'rust']];
+// // Foreach
+// //  $programmingLanguages = ['php', ['java', 'c', 'c++', 'go', 'rust']];
 
-//  foreach($programmingLanguages as $language) { // foreach loops through each iteration of an array and assigns it to a variable
-//     echo $language . '<br />';
-//  }
+// //  foreach($programmingLanguages as $language) { // foreach loops through each iteration of an array and assigns it to a variable
+// //     echo $language . '<br />';
+// //  }
 
-//  foreach($programmingLanguages as $key => $language) { // you can set a key to each iteration also
-//     echo $key . ':' . $language . '<br />';
-//  }
- //QUICK NOTE - The variable doesnt get destroyed after the loop so typically you'd unset($language) after the loop to prevent problems
+// //  foreach($programmingLanguages as $key => $language) { // you can set a key to each iteration also
+// //     echo $key . ':' . $language . '<br />';
+// //  }
+//  //QUICK NOTE - The variable doesnt get destroyed after the loop so typically you'd unset($language) after the loop to prevent problems
 
- // Foreach over associatibe arrays
+//  // Foreach over associatibe arrays
 
- $user = [
-    'name' => 'Jack',
-    'email' => 'jack@email.com',
-    'skills' => ['html', 'css', 'javascript', 'php'],
- ];
+//  $user = [
+//     'name' => 'Jack',
+//     'email' => 'jack@email.com',
+//     'skills' => ['html', 'css', 'javascript', 'php'],
+//  ];
+
+// //  foreach($user as $key => $value) {
+// //     echo $key . ': ' . $value . '<br />'; // This will only print name and email, not the skills array
+// //  }
 
 //  foreach($user as $key => $value) {
-//     echo $key . ': ' . $value . '<br />'; // This will only print name and email, not the skills array
-//  }
+//     echo $key . ': ' . json_encode($value) . '<br />'; // Using json.encode() converts the array so it can be printed
+//  };
 
- foreach($user as $key => $value) {
-    echo $key . ': ' . json_encode($value) . '<br />'; // Using json.encode() converts the array so it can be printed
- };
+// Switch Statements
+// Like an if statement, allows you to compare the same expression with different values and run different code based on which value matches that expression
 
+// $paymentStatus = 'paid';
+
+// switch($paymentStatus) {
+//     case 'paid':  // if $paymentStatus = 'paid'
+//         echo 'Paid'; // print 'Paid'
+//         break; // stop the loop when the correct case has been found
+    
+//     case 'declined':
+//     case 'rejected': // This case accepts both declined and rejected as a correct value
+//         echo 'Payment Declined';
+//         break;
+
+//     case 'pending':
+//         echo 'Pending Payment';
+//         break;
+
+//     default:
+//         echo 'Unknown Payment Status';
+// }
+
+// function x() {
+//     sleep(3);
+
+//     echo 'Done <br />'
+// }
+
+// if(x() === 1){ // Using this would be a problem as the function takes 3 seconds to run however this if else statement runs the function 3 times so overall takes 9 seconds to complete
+//     echo 1;
+// } elseif (x() === 2){
+//     echo 2;
+// } elseif (x() === 3){
+//     echo 3;
+// } else {
+//     echo 4;
+// }
+
+// switch(x()) { // This is where the switch statement works well as the function only needs to run once
+//     case 1:
+//         echo 1;
+//         break;
+//     case 2:
+//         echo 2;
+//         break;
+//     case 3:
+//         echo 3;
+//         break;
+//     default:
+//         echo 4;
+// }
