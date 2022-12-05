@@ -687,3 +687,19 @@
 
     // $arr = ['x' => 1, 'y' => 2];
     // echo foo(...$arr); // if using an associative array the name of the arguments will that of the key of each iteration of the array
+
+// Static Variables 
+
+$x = 5; // This would be a global scope meaning it can be accessed all throughout the script and if included in any other file like 'include(example.php)'
+
+// Variables in a function have local scope so they must be defined within the function
+// or you can define it as a perameter and an argument
+// or you can use the global keyword to access the variable globally
+
+        function foo() {
+            global $x; //globally referencing the $x variable so the function can access it
+            $x = 10; // you can also change the variable within the function and it will apply to the original variable when the function is called
+            echo $x;
+        }
+        foo();
+
