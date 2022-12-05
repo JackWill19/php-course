@@ -647,3 +647,43 @@
 // }
 
 // var_dump(foo());
+
+//Functions - Continued
+
+//Accepting arguments
+    // function foo(int $x, int $y){ // $x and $y are parameters here, you can type hint these parameters with (int $x, int $y) which will tell php to expect a number to be passed
+    //     return $x * $y;
+    // }
+
+    // echo foo(5, 10); // The values passed when calling the function are called arguments
+
+// Variadic functions
+
+    // function sum(...$numbers): int|float { // ...$numbers will create a new array called $numbers and store all arguments being passed within it 
+    //     // $sum = 0;
+    //     // foreach($numbers as $number){
+    //     //     $sum += $number;
+    //     // }
+    //     return array_sum($numbers);
+    // }
+
+    // $a = 6.0;
+    // $b = 7;
+
+    // echo sum($a, $b) . '<br />';
+
+// Named Arguments
+    // function sum(int $x, int $y): int {
+    //     if ($x % $y === 0) {
+    //         return $x / $y;
+    //     }
+    //         return $x;
+    //     }
+    
+    // // $x = 6;
+    // // $y = 3;
+
+    // // echo foo(x: $x, y: $y); // php allows you to name your arguments so you know which order to put your arguments
+
+    // $arr = ['x' => 1, 'y' => 2];
+    // echo foo(...$arr); // if using an associative array the name of the arguments will that of the key of each iteration of the array
