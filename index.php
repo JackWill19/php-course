@@ -423,5 +423,30 @@
     // Do something else
 // }
 
+// LOOPS
+
+// While
+    $i = 0;
+    while($i <= 15){ //While i is less than or equal to 15
+        echo $i++; // print i and increment it by 1 = 1, 2, 3, 4... 15
+    }
+
+// Do-while
+do {
+    echo $i++; // prints 0, 1, 2, 3... 15
+} while ($i <= 15);
+
+// For
+for($i = 0; $i < 15; $i++){ // i starts at 0, loop while i is less than 15, after every loop, add 1 to i
+    echo $i; // prints 1, 2, 3, 4... 14
+}
+
+$text = 'Hello World';
+for($i = 0; $i < strlen($text); $i++){ // Loops through each character of $text string
+    echo $text[$i] . '<br />'; // Echo each character of $text onto their own line
+}
+
+// Foreach
+
 
 
