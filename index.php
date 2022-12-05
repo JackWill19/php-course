@@ -594,3 +594,17 @@
 
     // echo sum('5', 10);
 
+// Include and Require
+    // A way to split your code into multiple files and include them where needed
+    // Use require when the file is required by the application.
+    // Use include when the file is not required and application should continue when file is not found.
+        
+    include 'file.php'; // Include the code from file.php
+
+    // require
+    // require_once
+    // include
+    // include_once
+
+
+
