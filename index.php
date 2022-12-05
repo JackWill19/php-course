@@ -538,7 +538,6 @@
 // }
 
 // MATCH
-
 // $paymentStatus = 1;
 
 // $paymentStatusDisplay = match($paymentStatus) { // match does strict comparison
@@ -563,3 +562,35 @@
     // echo $x;
     // echo '<br />';
     // echo 'Hello World';
+
+// Declare
+
+// Declare - ticks
+    // $x = 3;
+    // $y = 5;
+    // $z = $x*$y;
+
+    // function onTick() {
+    //     echo 'Tick<br />';
+    // }
+
+    // register_tick_function('onTick');
+
+    // declare(ticks=3);
+
+    // $i = 0;
+    // $length = 10;
+
+    // while($i < $length) {
+    //     echo $i++ . '<br />';
+    // }
+
+// Declare - strict_types
+    // declare(strict_types=1);
+
+    // function sum(int $x, int $y) {
+    //     return $x + $y;
+    // }
+
+    // echo sum('5', 10);
+
