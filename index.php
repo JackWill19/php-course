@@ -767,10 +767,28 @@
     // echo '</pre>';
 
 // Arrow Functions
-    $array  = [1, 2, 3, 4];
+    // $array  = [1, 2, 3, 4];
 
-    $array2 = array_map(fn($number) => $number * $number, $array); // Arrow functions have a singular expression and returns the value of it
+    // $array2 = array_map(fn($number) => $number * $number, $array); // Arrow functions have a singular expression and returns the value of it
 
-    echo '<pre>';
-    print_r($array2);
-    echo '</pre>';
+    // echo '<pre>';
+    // print_r($array2);
+    // echo '</pre>';
+
+// Date & Time 
+
+$currentTime = time(); // prints the amount of seconds since Jan 1st 1970
+
+echo $currentTime . '<br />';
+
+echo $currentTime + 5 * 24 * 60 * 60 . '<br />'; // Working out the time in 5 days
+
+echo $currentTime - 60 * 60 * 24 . '<br />'; // working out the time yesterday
+
+echo date('m/d/Y g:ia') . '<br />'; // Creating a date and time stamp
+
+echo date('m/d/Y g:ia', $currentTime + 5 * 24 * 60 * 60) . '<br />'; // Creating a date and time stamp for 5 days in the future
+
+
+
+
