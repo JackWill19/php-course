@@ -874,3 +874,22 @@
     // if (! in_array('a', $array)) { // If 'a' is not in the array // Making sure 'a' is there given the fact it is indexed as 0 so could return as false
     //     echo 'Letter not found'; // Print Letter not found
     // }
+
+// Array Difference
+
+// $array1 = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5];
+// $array2 = ['f' => 4, 'g' => 5, 'i' => 6, 'j' => 7, 'k' => 8];
+// $array3 = ['l' => 3, 'm' => 9, 'n' => 10];
+
+// prettyPrintArray(array_diff($array1, $array2, $array3)); // Compares frist against other given arrays, will return the values of the first array that dont appear in the other two
+// prettyPrintArray(array_diff_assoc($array1, $array2, $array3)); // Does the same as array_diff but with the keys not values so [a, b, c, d, e] will all be returned
+
+// Sorting Arrays
+
+    $array = ['d' => 3, 'b' => 1, 'c' => 4, 'a' => 2];
+    asort($array); // will sort by the value
+    ksort($array); // will sort by the key
+
+    usort($array, fn($a, $b) => $a <> $b);  // Sorting with a function $a <> $b will sort the array numerically
+    usort($array, fn($a, $b) => $b <> $a);  // Sorting with a function $a <> $b will sort the array numerically in reverse
+    prettyPrintArray($array);
