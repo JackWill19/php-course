@@ -777,17 +777,63 @@
 
 // Date & Time 
 
-$currentTime = time(); // prints the amount of seconds since Jan 1st 1970
+    // $currentTime = time(); // prints the amount of seconds since Jan 1st 1970
 
-echo $currentTime . '<br />';
+    // echo $currentTime . '<br />';
 
-echo $currentTime + 5 * 24 * 60 * 60 . '<br />'; // Working out the time in 5 days
+    // echo $currentTime + 5 * 24 * 60 * 60 . '<br />'; // Working out the time in 5 days
 
-echo $currentTime - 60 * 60 * 24 . '<br />'; // working out the time yesterday
+    // echo $currentTime - 60 * 60 * 24 . '<br />'; // working out the time yesterday
 
-echo date('m/d/Y g:ia') . '<br />'; // Creating a date and time stamp
+    // echo date('m/d/Y g:ia') . '<br />'; // Creating a date and time stamp
 
-echo date('m/d/Y g:ia', $currentTime + 5 * 24 * 60 * 60) . '<br />'; // Creating a date and time stamp for 5 days in the future
+    // echo date('m/d/Y g:ia', $currentTime + 5 * 24 * 60 * 60) . '<br />'; // Creating a date and time stamp for 5 days in the future
+
+
+// Working with Arrays
+
+// Array Chunk
+    // array_chunk(array $array, $int $length, bool $preserveKeys = false): array
+    require 'helpers.php';
+    // $items = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5];
+    // prettyPrintArray(array_chunk($items, 2)); // This will split $items array into seperate arrays of 2 entries evenly and make another array with one outlayer if the array isnt divisable by two
+
+// // Array Combine
+    // // array_combine(array $keys, array $values): array;
+
+    // $array1 = ['a', 'b', 'c'];
+    // $array2 = [5, 10, 15];
+
+    // prettyPrintArray(array_combine($array1, $array2)); // creates an array with the given keys and values, the first array acts as the keys and the second acts as values
+
+// // Array Filter
+    // // array_filter(array $array, callable|null $callback = $null, int $mode = 0): array
+
+    // $array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    // $even = array_filter($array, fn($number) => $number % 2 === 0); // If the number passed is divisable by 2 then keep that in the array otherwise, filter it out
+
+    // $even = array_values($even); // Will reindex the even array so that the keys are indexed correctly
+
+    // prettyPrintArray($even);
+
+// Array Keys
+    // array_keys(array $keys, mixed $search_value, bool $strict = false): array;
+
+    // $array = ['a' => 5, 'b' => 10, 'c' => 15, 'd' => 5, 'e' => 10];
+
+    // $keys = array_keys($array, 10); // will make an array of the specified keys, in this example it will search for the value 10 and will return 'b' and 'e'
+    // prettyPrintArray($keys);
+
+// Array Map
+    // array_map(callable|null $callback, array $array, array ...$arrays): array
+    // Applies the callback function to each element of an array
+
+    // $array = ['a' => 1, 'b' => 2, 'c' => 3];
+    // $array2 = ['d' => 4, 'e' => 5, 'f' => 6];
+    // $array = array_map(fn($number1, $number2) => $number1 * $number2, $array1, $array2); // Will multiply the numbers in array one by array 2
+
+    // prettyPrintArray($array);
 
 
 
