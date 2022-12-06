@@ -864,3 +864,13 @@
     // );
     // echo $total;
 
+// Array Search
+    // array_search(mixed $needle, array $haystack, bool $strict = false): int|string|false
+
+    // $array = ['a', 'b', 'c', 'D', 'E', 'ab', 'bc', 'cd', 'b', 'd'];
+
+    // $key = array_search('b', $array); // only returns the index for the first matching value, if no result, returns false, can return 0 if the matching value is in index 0
+
+    // if (! in_array('a', $array)) { // If 'a' is not in the array // Making sure 'a' is there given the fact it is indexed as 0 so could return as false
+    //     echo 'Letter not found'; // Print Letter not found
+    // }
