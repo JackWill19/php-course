@@ -704,20 +704,39 @@
         // foo();
 
 // The static keyword is also used to declare variables in a function which keep their value after the function has ended.
-    function getValue() {
-        static $value = null; // Static variables are called one time after that they can not be called again with the same request
-        if($value === null) {
-            $value = someVeryExpensiveFunction();
-        }
-        return $value;
+    // function getValue() {
+    //     static $value = null; // Static variables are called one time after that they can not be called again with the same request
+    //     if($value === null) {
+    //         $value = someVeryExpensiveFunction();
+    //     }
+    //     return $value;
+    //     }
+
+    // function someVeryExpensiveFunction() {
+    //     sleep(2);
+    //     echo 'Processing';
+    //     return 10;
+    // }
+
+    // getValue() . '<br />'; // = 'Processing10'
+    // getValue() . '<br />'; // = '10'
+    // getValue() . '<br />'; // = '10'
+
+// Variable Functions
+    // So you can call functions from variables by appending () to the variable
+        function sum(int|float ...$numbers): int|float {
+            return array_sum($numbers);
         }
 
-    function someVeryExpensiveFunction() {
-        sleep(2);
-        echo 'Processing';
-        return 10;
-    }
+        $x = 'sum'; // Variable same name as function, if its different to the function you get an undefined error
 
-    getValue() . '<br />'; // = 'Processing10'
-    getValue() . '<br />'; // = '10'
-    getValue() . '<br />'; // = '10'
+        if(is_callable($x)) { // Check whether the contents of a variable can be called as a function or not
+            echo $x(1, 2, 3, 4); // Calling the variable with () afterwards so its essentially calling a function 'sum()'
+        } else {
+            echo 'Not Callable';
+        }
+
+
+
+// Anonymous Functions
+// Arrow Functions
