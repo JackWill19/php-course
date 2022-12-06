@@ -886,10 +886,28 @@
 
 // Sorting Arrays
 
-    $array = ['d' => 3, 'b' => 1, 'c' => 4, 'a' => 2];
-    asort($array); // will sort by the value
-    ksort($array); // will sort by the key
+    // $array = ['d' => 3, 'b' => 1, 'c' => 4, 'a' => 2];
+    // asort($array); // will sort by the value
+    // ksort($array); // will sort by the key
 
-    usort($array, fn($a, $b) => $a <> $b);  // Sorting with a function $a <> $b will sort the array numerically
-    usort($array, fn($a, $b) => $b <> $a);  // Sorting with a function $a <> $b will sort the array numerically in reverse
-    prettyPrintArray($array);
+    // usort($array, fn($a, $b) => $a <> $b);  // Sorting with a function $a <> $b will sort the array numerically
+    // usort($array, fn($a, $b) => $b <> $a);  // Sorting with a function $a <> $b will sort the array numerically in reverse
+    // prettyPrintArray($array);
+
+// Destructuring Arrays
+
+    // $array = [1, 2, 3, 4];
+    // $array2 = [1, 2, [3, 4]];  // Nested Array 
+
+        // list($a, $b, $c, $d) = $array; // this assigns the variables to the values in the same order, so $a = 1, $b = 2, $c = 3, $d = 4
+        // [$a, $b, $c, $d] = $array; // this is the shorthand version but does the same thing
+        // // [$a, , $c, $d] = $array; // you can skip adding a variable by having a blank comma
+        
+        // [$a, $b, [$c, $d]] = $array2; // This will destructure the nested array
+
+    $array = [1, 2, 3];
+    [1 => $a, 0 => $b, 2 => $c] = $array; // assigns variables via the key (index) of each value 
+
+
+    echo $a . ', ' . $b . ', ' . $c . '<br />'; // Will echo 2, 1, 3
+
