@@ -724,19 +724,26 @@
 
 // Variable Functions
     // So you can call functions from variables by appending () to the variable
-        function sum(int|float ...$numbers): int|float {
-            return array_sum($numbers);
-        }
+        // function sum(int|float ...$numbers): int|float {
+        //     return array_sum($numbers);
+        // }
 
-        $x = 'sum'; // Variable same name as function, if its different to the function you get an undefined error
+        // $x = 'sum'; // Variable same name as function, if its different to the function you get an undefined error
 
-        if(is_callable($x)) { // Check whether the contents of a variable can be called as a function or not
-            echo $x(1, 2, 3, 4); // Calling the variable with () afterwards so its essentially calling a function 'sum()'
-        } else {
-            echo 'Not Callable';
-        }
-
+        // if(is_callable($x)) { // Check whether the contents of a variable can be called as a function or not
+        //     echo $x(1, 2, 3, 4); // Calling the variable with () afterwards so its essentially calling a function 'sum()'
+        // } else {
+        //     echo 'Not Callable';
+        // }
 
 
 // Anonymous Functions
+    // Functions with no name
+    //    $sum = function (int|float ...$numbers): int|float { // You can assign anonymous functions to a variable
+    //         return array_sum($numbers);
+    //     }; //Anonymous functions need to end in a semi colon
+
+    //     echo $sum(1, 2, 3, 4);
+
+
 // Arrow Functions
