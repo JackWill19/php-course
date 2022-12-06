@@ -835,6 +835,16 @@
 
     // prettyPrintArray($array);
 
+// Array Merge
+    // array_merge(array ...$arrays): array
+    // Merges multiple arrays
+    
+    // $array = [1, 2, 3];
+    // $array = [4, 5, 6];
+    // $array = [7, 8, 9];
+
+    // $merged = array_merge($array1, $array2, $array3); // merges all the arrays and reindexes the keys, starting from 0
+    // prettyPrintArray($merged);
 
 
 
