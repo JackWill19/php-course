@@ -746,24 +746,31 @@
     //     echo $sum(1, 2, 3, 4);
 
 //  Array mapping
-    $array = [1, 2, 3, 4];
+    // $array = [1, 2, 3, 4];
 
-    $array2 = array_map(function($element){ // Same map functionality as JS, maps over the array and applies the function to each iteration
-        return $element * 2; // multiply each iteration of array by 2
-    }, $array); // Referening what array is to be mapped over
+    // $array2 = array_map(function($element){ // Same map functionality as JS, maps over the array and applies the function to each iteration
+    //     return $element * 2; // multiply each iteration of array by 2
+    // }, $array); // Referening what array is to be mapped over
 
-    // Or
+    // // Or
 
-    function foo($element) { // Set the function first
-        return $element * 2;
-    }
+    // function foo($element) { // Set the function first
+    //     return $element * 2;
+    // }
 
-    $array2 = array_map('foo', $array); // Then call it as a string
+    // $array2 = array_map('foo', $array); // Then call it as a string
 
-    echo '<pre>';
-    print_r($array);
+    // echo '<pre>';
+    // print_r($array);
 
-    print_r($array2);
-    echo '</pre>';
+    // print_r($array2);
+    // echo '</pre>';
 
 // Arrow Functions
+    $array  = [1, 2, 3, 4];
+
+    $array2 = array_map(fn($number) => $number * $number, $array); // Arrow functions have a singular expression and returns the value of it
+
+    echo '<pre>';
+    print_r($array2);
+    echo '</pre>';
