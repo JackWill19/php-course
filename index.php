@@ -905,9 +905,34 @@
         
         // [$a, $b, [$c, $d]] = $array2; // This will destructure the nested array
 
-    $array = [1, 2, 3];
-    [1 => $a, 0 => $b, 2 => $c] = $array; // assigns variables via the key (index) of each value 
+    // $array = [1, 2, 3];
+    // [1 => $a, 0 => $b, 2 => $c] = $array; // assigns variables via the key (index) of each value 
 
 
-    echo $a . ', ' . $b . ', ' . $c . '<br />'; // Will echo 2, 1, 3
+    // echo $a . ', ' . $b . ', ' . $c . '<br />'; // Will echo 2, 1, 3
 
+
+// php.ini & configuration
+
+// error_reporting
+// error_log
+// display_errors
+
+// Error Handling
+    // error_reporting(0) will turn off error reporting so no errors will be displayed
+    // error_reporting(E_ALL) will turn return all errors including warnings
+    // error_reporting(E_ALL & ~E_WARNING) will turn return all errors excluding warnings, & ~ means and not
+
+// trigger_error('Example Error!', E_USER_ERROR); // Will trigger a fatal error and stop the script from executing
+// echo 1;
+
+// function errorHandler(int $type, string $msg, ?string $file = null, ?int $line = null){ // Creating a custom error handler (?parameter means the parameter is optional)
+//     echo $type . ': ' . $msg . ' in ' . $file . ' on line: ' . $line;
+//     exit;
+// }
+
+// error_reporting(E_ALL & ~E_WARNING);
+
+// set_error_handler('errorHandler', E_ALL & ~E_WARNING);
+
+// echo $x;
